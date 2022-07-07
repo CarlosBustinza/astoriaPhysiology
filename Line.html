@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawLogScales);
+
+function drawLogScales() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Standar');
+      data.addColumn('number', 'Me');
+
+      data.addRows([
+        [0, 36.2, 37], 
+        [1, 35.9, 37], 
+        [2, 35.7, 37], 
+        [3, 35.6, 37], 
+        [4, 35.5, 37], 
+        [5, 35.5, 37], 
+        [6, 35.5, 37], 
+        [7, 35.6, 37], 
+        [8, 35.9, 37], 
+        [9, 36.3, 37], 
+        [10, 36.4, 37], 
+        [11, 37, 37], 
+        [12, 37, 37], 
+        [13, 37, 37], 
+        [14, 37, 37], 
+        [15, 37, 37], 
+        [16, 37, 37], 
+        [17, 37, 37], 
+        [18, 37, 37], 
+        [19, 37, 37], 
+        [20, 37, 37],
+        [21, 37, 37], 
+        [22, 36.6, 37], 
+        [23, 36.5, 37], 
+        [24, 36.2, 37]
+      ]);
+
+      var options = {
+        hAxis: {
+          title: 'Time',
+        //   logScale: false
+        },
+        vAxis: {
+          title: 'Grados (C°)',
+        //   logScale: false
+        },
+        colors: ['#a52714', '#097138']
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+
+    </script>
+  </head>
+
+  <body style="background-color: black;">
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+  </body>
+</html>
+
+
+<!-- jueves a las 12 con el dentista / / / meter ocas -->
